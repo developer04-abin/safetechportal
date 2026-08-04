@@ -118,7 +118,7 @@ export default function App() {
           <main className="relative z-10">
             
             {/* Hero Section */}
-            <Hero language="en" darkMode={darkMode} />
+            <Hero  darkMode={darkMode} />
             
             {/* Alert ticker banner */}
             <Marqueue language="en" />
