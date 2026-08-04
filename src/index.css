@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ictak-blue: #004d80;
+  --color-ictak-cyan: #00b4d8;
+  --color-emergency-red: #ef4444;
+  
+  --font-sans: "Inter", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-float-medium: float 5s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+  }
+}
+
+/* Enable class-based dark mode selector in Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+/* Custom Base Styles */
+:root {
+  --bg-color: #eef6fc; /* Beautiful light blue background tint instead of plain white */
+  --text-color: #0f172a;
+  --text-muted: #475569;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --border-color: rgba(0, 77, 128, 0.08);
+  --shadow-color: rgba(0, 77, 128, 0.04);
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --bg-color: #050508;
+  --text-color: #f3f4f6;
+  --text-muted: #94a3b8;
+  --card-bg: rgba(10, 10, 20, 0.65);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* High Contrast Mode Override */
+.high-contrast {
+  --bg-color: #000000 !important;
+  --text-color: #ffffff !important;
+  --text-muted: #e2e8f0 !important;
+  --card-bg: #000000 !important;
+  --border-color: #ffffff !important;
+  --shadow-color: transparent !important;
+}
+
+html {
+  scroll-behavior: auto; /* Required for Lenis smooth scroll */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Force light-blue background on all page sections ONLY when the HTML root is not dark */
+html:not(.dark) section:not(#home):not(#marqueue):not(footer) {
+  background-color: var(--bg-color) !important;
+  transition: background-color 0.3s;
+}
+
+html:not(.dark) section:not(#home):not(#marqueue):not(footer):nth-of-type(even) {
+  background-color: #e2f0fb !important; /* Slightly darker light blue for subtle section contrast */
+}
+
+/* Accessible Font Resizing */
+.text-size-large {
+  font-size: 1.15rem;
+}
+.text-size-large h1, .text-size-large .h1-scale { font-size: 1.2em !important; }
+.text-size-large h2, .text-size-large .h2-scale { font-size: 1.2em !important; }
+.text-size-large h3, .text-size-large .h3-scale { font-size: 1.15em !important; }
+.text-size-large p, .text-size-large span, .text-size-large label, .text-size-large input, .text-size-large button { 
+  font-size: 1.15em !important; 
+  line-height: 1.6 !important;
+}
+
+.text-size-xl {
+  font-size: 1.3rem;
+}
+.text-size-xl h1, .text-size-xl .h1-scale { font-size: 1.4em !important; }
+.text-size-xl h2, .text-size-xl .h2-scale { font-size: 1.4em !important; }
+.text-size-xl h3, .text-size-xl .h3-scale { font-size: 1.3em !important; }
+.text-size-xl p, .text-size-xl span, .text-size-xl label, .text-size-xl input, .text-size-xl button { 
+  font-size: 1.3em !important; 
+  line-height: 1.7 !important;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: #004d80;
+  border-radius: 5px;
+  border: 2px solid var(--bg-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00b4d8;
+}
+
+/* Premium Card Panels */
+.safetech-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 4px 20px 0 var(--shadow-color) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.safetech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px 0 rgba(0, 77, 128, 0.1) !important;
+  border-color: #00b4d8 !important;
+}
+
+.dark .safetech-card:hover {
+  border-color: #00b4d8 !important;
+  box-shadow: 0 10px 35px 0 rgba(0, 180, 216, 0.15) !important;
+}
+
+/* High Contrast adjustments for focus & interactive states */
+.high-contrast .safetech-card {
+  border: 2px solid #ffffff !important;
+}
+.high-contrast .safetech-card:hover {
+  border-color: #ffff00 !important;
+  outline: 2px solid #ffff00;
+}
+.high-contrast button {
+  border: 2px solid #ffffff !important;
+}
+.high-contrast button:hover {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #ffff00 !important;
+}
+.high-contrast input, .high-contrast select, .high-contrast textarea {
+  border: 2px solid #ffffff !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Gradient text */
+.gradient-text-safetech {
+  background: linear-gradient(to right, #004d80, #00b4d8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .gradient-text-safetech {
+  background: linear-gradient(to right, #ffffff, #00b4d8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.high-contrast .gradient-text-safetech {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: #ffff00 !important;
+}
+
+/* Dot grid background overlay */
+.bg-grid-light {
+  background-size: 30px 30px;
+  background-image: 
+    radial-gradient(circle, rgba(0, 77, 128, 0.05) 1px, transparent 1px);
+}
+
+.dark .bg-grid-light {
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.high-contrast .bg-grid-light {
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px) !important;
+}
+
+/* Lenis Smooth scroll support */
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Custom details for input fields in dark mode */
+.dark input, .dark select, .dark textarea {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f3f4f6 !important;
+}
+.dark input:focus, .dark select:focus, .dark textarea:focus {
+  border-color: #00b4d8 !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .text-slate-900 {
+  color: #f3f4f6 !important;
+}
+.dark .text-slate-855 {
+  color: #e5e7eb !important;
+}
+.dark .text-slate-800 {
+  color: #e5e7eb !important;
+}
+.dark .text-slate-700 {
+  color: #d1d5db !important;
+}
+.dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+.dark .bg-white {
+  background-color: rgba(15, 15, 25, 0.75) !important;
+}
+.dark .bg-slate-50 {
+  background-color: #08080c !important;
+}
+.dark .border-slate-200 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+.dark .border-slate-100 {
+  border-color: rgba(255, 255, 255, 0.04) !important;
+}
