@@ -19,8 +19,6 @@ interface HeaderProps {
 
 export default function Header({
   language,
-  contrastMode,
-  setContrastMode,
   textSize,
   setTextSize,
   onReportIncident,
