@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useScrollDirection } from '../hooks/useScrollDirection';
 import { translations } from '../utils/translations';
 import { HiOutlineSearch } from 'react-icons/hi';
-import { MdOutlineContrast, MdFormatSize } from 'react-icons/md';
+import { MdFormatSize } from 'react-icons/md';
 import { FiSun, FiMoon } from 'react-icons/fi';
 
 interface HeaderProps {
