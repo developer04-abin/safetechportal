@@ -48,22 +48,22 @@ const achievements: AchievementItem[] = [
 
 export default function Achievements() {
   return (
-    <section className="py-20 bg-slate-50 dark:bg-slate-900 border-b border-slate-200/50">
+    <section className="relative z-10 py-20 bg-slate-50 dark:bg-slate-950 border-b border-slate-200/60 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title */}
         <div className="text-center mb-16">
-          <span className="font-space text-xs tracking-wider text-ictak-blue font-bold uppercase">CAMPAIGN PROGRESSION</span>
-          <h2 className="h2-scale font-space text-3xl font-bold text-slate-900 mt-2">
+          <span className="font-space text-xs tracking-wider text-ictak-blue dark:text-ictak-cyan font-bold uppercase">CAMPAIGN PROGRESSION</span>
+          <h2 className="h2-scale font-space text-3xl font-bold text-slate-900 dark:text-white mt-2">
             SafeTech Key <span className="gradient-text-safetech">Milestones</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto mt-2 font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-xl mx-auto mt-2 font-light leading-relaxed">
             A retrospect of our technical partnerships, regional citizen outreach metrics, and public safety honors.
           </p>
         </div>
 
         {/* Vertical Timeline Tree */}
-        <div className="relative border-l border-slate-200 md:border-l-0 md:before:absolute md:before:left-1/2 md:before:top-0 md:before:bottom-0 md:before:w-[1px] md:before:bg-slate-200 max-w-5xl mx-auto flex flex-col gap-12 md:gap-16">
+        <div className="relative border-l border-slate-200 dark:border-slate-800 md:border-l-0 md:before:absolute md:before:left-1/2 md:before:top-0 md:before:bottom-0 md:before:w-[1px] md:before:bg-slate-200 dark:md:before:bg-slate-800 max-w-5xl mx-auto flex flex-col gap-12 md:gap-16">
           
           {achievements.map((ach, index) => {
             const isLeft = index % 2 === 0;
@@ -80,7 +80,7 @@ export default function Achievements() {
               >
                 {/* Node Dot Tracker */}
                 <div 
-                  className={`absolute top-[6px] left-[-6px] md:left-auto md:top-[12px] w-3 h-3 rounded-full bg-ictak-cyan border-2 border-white shadow-sm ${
+                  className={`absolute top-[6px] left-[-6px] md:left-auto md:top-[12px] w-3 h-3 rounded-full bg-ictak-cyan border-2 border-white dark:border-slate-900 shadow-sm ${
                     isLeft ? 'md:right-[-6px]' : 'md:left-[-6px]'
                   }`} 
                 />
@@ -88,16 +88,16 @@ export default function Achievements() {
                 {/* Tag Period */}
                 <div className="flex items-center gap-2 mb-2 font-space text-[10px] uppercase font-bold tracking-widest text-ictak-cyan">
                   <span>{ach.year}</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-200"></span>
-                  <span className="text-slate-400">{ach.category}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-200 dark:bg-slate-700"></span>
+                  <span className="text-slate-400 dark:text-slate-500">{ach.category}</span>
                 </div>
 
                 {/* Card Container */}
-                <div className="w-full safetech-card p-6 md:p-8 rounded-3xl border border-slate-200/60 bg-white group hover:border-ictak-cyan transition-all duration-300 text-left">
-                  <h3 className="h3-scale font-space text-base md:text-lg font-bold text-slate-900 group-hover:text-ictak-blue transition-colors duration-300">
+                <div className="w-full safetech-card p-6 md:p-8 rounded-3xl border border-slate-200/70 dark:border-slate-800/80 bg-white dark:bg-slate-900 group hover:border-ictak-cyan transition-all duration-300 text-left shadow-sm">
+                  <h3 className="h3-scale font-space text-base md:text-lg font-bold text-slate-900 dark:text-white group-hover:text-ictak-cyan transition-colors duration-300">
                     {ach.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-500 font-light mt-3 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-350 font-light mt-3 leading-relaxed">
                     {ach.description}
                   </p>
                 </div>

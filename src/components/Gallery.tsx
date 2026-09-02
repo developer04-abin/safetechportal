@@ -74,18 +74,18 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-20 relative bg-slate-50 dark:bg-slate-900 select-none border-b border-slate-200/50">
+    <section id="gallery" className="py-20 lg:py-24 relative bg-slate-50 dark:bg-[#06060c] select-none border-b border-slate-200/60 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 text-left">
           <div>
-            <span className="font-space text-xs tracking-wider text-ictak-blue font-bold uppercase">CAMPAIGN ACTIONS</span>
-            <h2 className="h2-scale font-space text-3xl font-bold text-slate-900 mt-2">
-              SafeTech Outreach <span className="gradient-text-safetech">Gallery</span>
+            <span className="font-space text-xs tracking-wider text-ictak-blue dark:text-ictak-cyan font-bold uppercase">CAMPAIGN ACTIONS</span>
+            <h2 className="h2-scale font-space text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">
+              SafeTech Outreach <span className="text-ictak-cyan">Gallery</span>
             </h2>
           </div>
-          <p className="text-xs sm:text-sm text-slate-500 max-w-sm font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-sm font-light leading-relaxed">
             Snapshots of cyber-security outreach drives, student ambassador certifications, and community seminars across Kerala.
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function Gallery() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
               onClick={() => setActiveImageIndex(index)}
-              className="break-inside-avoid relative rounded-3xl overflow-hidden bg-white border border-slate-200/60 hover:border-ictak-cyan/40 group cursor-pointer shadow-sm"
+              className="break-inside-avoid relative rounded-3xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 hover:border-ictak-cyan/40 group cursor-pointer shadow-sm"
             >
               {/* Image */}
               <img 

@@ -16,10 +16,10 @@ const partnersData = [
 
 export default function Partners() {
   return (
-    <section className="py-16 relative bg-[#f8fafc] dark:bg-[#020204]/40 select-none overflow-hidden border-b border-slate-200/50">
+    <section className="py-16 relative bg-slate-50 dark:bg-[#06060c] select-none overflow-hidden border-b border-slate-200/60 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
-        <span className="font-space text-xs tracking-wider text-slate-400 font-bold uppercase">CAMPAIGN ECOSYSTEM</span>
-        <h4 className="font-space text-xs text-slate-500 font-bold mt-2 uppercase">
+        <span className="font-space text-xs tracking-wider text-slate-400 dark:text-slate-500 font-bold uppercase">CAMPAIGN ECOSYSTEM</span>
+        <h4 className="font-space text-xs text-slate-600 dark:text-slate-400 font-bold mt-2 uppercase">
           Supported by Government Agencies & Academic Alliances
         </h4>
       </div>
@@ -33,10 +33,10 @@ export default function Partners() {
               return (
                 <div 
                   key={part.id} 
-                  className={`flex items-center gap-3 text-slate-400 hover:text-slate-800 transition-all duration-300 cursor-pointer ${part.color} group`}
+                  className={`flex items-center gap-3 text-slate-400 dark:text-slate-500 hover:text-slate-800 dark:hover:text-white transition-all duration-300 cursor-pointer ${part.color} group`}
                 >
                   <Icon className="text-2xl transition-all duration-300 group-hover:scale-105" />
-                  <span className="font-space text-xs md:text-sm font-bold tracking-wider uppercase text-slate-500 group-hover:text-slate-800 transition-colors">
+                  <span className="font-space text-xs md:text-sm font-bold tracking-wider uppercase text-slate-500 dark:text-slate-400 group-hover:text-slate-800 dark:group-hover:text-white transition-colors">
                     {part.name}
                   </span>
                 </div>

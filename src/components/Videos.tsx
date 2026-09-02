@@ -58,14 +58,14 @@ export default function Videos() {
   const Player = ReactPlayer as any;
 
   return (
-    <section id="videos" className="py-20 relative bg-white dark:bg-[#020204] select-none border-b border-slate-200/50">
+    <section id="videos" className="py-20 lg:py-24 relative bg-white dark:bg-[#06060c] select-none border-b border-slate-200/60 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title */}
         <div className="mb-12 text-left">
-          <span className="font-space text-xs tracking-wider text-ictak-blue font-bold uppercase">DIGITAL SAFETY VIDEOS</span>
-          <h2 className="h2-scale font-space text-3xl font-bold text-slate-900 mt-2">
-            Fraud Prevention <span className="gradient-text-safetech">Micro-videos</span>
+          <span className="font-space text-xs tracking-wider text-ictak-blue dark:text-ictak-cyan font-bold uppercase">DIGITAL SAFETY VIDEOS</span>
+          <h2 className="h2-scale font-space text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">
+            Fraud Prevention <span className="text-ictak-cyan">Micro-videos</span>
           </h2>
         </div>
 
@@ -76,7 +76,7 @@ export default function Videos() {
           <div className="lg:col-span-8 flex flex-col gap-6">
             <div 
               onClick={() => setActiveVideo(featuredVideo)}
-              className="relative aspect-video w-full rounded-3xl overflow-hidden group cursor-pointer border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300"
+              className="relative aspect-video w-full rounded-3xl overflow-hidden group cursor-pointer border border-slate-200 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300"
             >
               {/* Thumbnail Image */}
               <img 
@@ -86,16 +86,16 @@ export default function Videos() {
               />
 
               {/* Dark Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
 
               {/* Glowing Play Icon Center */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 rounded-full bg-ictak-cyan/95 text-white flex items-center justify-center shadow-md scale-95 group-hover:scale-100 transition-all duration-300">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-r from-ictak-blue to-ictak-cyan text-white flex items-center justify-center shadow-lg scale-95 group-hover:scale-105 transition-all duration-300">
                 <BsPlayFill className="text-3xl md:text-4xl translate-x-0.5" />
               </div>
 
               {/* Details Bottom Left */}
               <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 z-10 max-w-xl text-left">
-                <span className="bg-ictak-blue text-white px-3 py-1 rounded-full font-space text-[10px] font-bold uppercase tracking-wider">
+                <span className="bg-gradient-to-r from-ictak-blue to-cyan-700 text-white px-3 py-1 rounded-full font-space text-[10px] font-bold uppercase tracking-wider shadow-md">
                   {featuredVideo.category}
                 </span>
                 <h3 className="font-space text-lg md:text-2xl font-bold text-white mt-3 leading-tight group-hover:text-ictak-cyan transition-colors duration-300">
@@ -115,23 +115,23 @@ export default function Videos() {
 
           {/* Side Clips Row List */}
           <div className="lg:col-span-4 flex flex-col gap-6 justify-between text-left">
-            <h4 className="font-space text-xs tracking-wider text-slate-400 font-bold uppercase border-b border-slate-100 pb-2">
+            <h4 className="font-space text-xs tracking-wider text-slate-400 dark:text-slate-500 font-bold uppercase border-b border-slate-100 dark:border-slate-800 pb-2">
               SELECT SAFETY VIDEO
             </h4>
             
-            <div className="flex flex-col gap-4 overflow-y-auto max-h-[380px] pr-2 scrollbar-thin flex-grow">
+            <div className="flex flex-col gap-3.5 overflow-y-auto max-h-[380px] pr-2 scrollbar-thin flex-grow">
               {videoData.map((video) => (
                 <div 
                   key={video.id}
                   onClick={() => setFeaturedVideo(video)}
                   className={`flex gap-4 p-3 rounded-2xl cursor-pointer transition-all duration-300 border ${
                     featuredVideo.id === video.id 
-                      ? 'bg-slate-100/80 border-ictak-cyan/35' 
-                      : 'border-transparent hover:bg-slate-50'
+                      ? 'bg-slate-100 dark:bg-slate-800 border-ictak-cyan/40 text-white shadow-xs' 
+                      : 'border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/50'
                   }`}
                 >
                   {/* Thumbnail Mini */}
-                  <div className="w-28 h-20 rounded-lg overflow-hidden relative shrink-0">
+                  <div className="w-28 h-20 rounded-xl overflow-hidden relative shrink-0">
                     <img 
                       src={video.thumbnail} 
                       alt={video.title} 
@@ -147,10 +147,10 @@ export default function Videos() {
                     <span className="font-space text-[9px] text-ictak-cyan font-bold tracking-wider uppercase">
                       {video.category}
                     </span>
-                    <h5 className="font-space text-xs font-bold text-slate-800 line-clamp-2 hover:text-ictak-blue transition-colors leading-snug">
+                    <h5 className="font-space text-xs font-bold text-slate-800 dark:text-slate-200 line-clamp-2 group-hover:text-ictak-cyan transition-colors leading-snug">
                       {video.title}
                     </h5>
-                    <span className="text-[10px] text-slate-400 font-space">{video.duration} MIN</span>
+                    <span className="text-[10px] text-slate-400 dark:text-slate-500 font-space">{video.duration} MIN</span>
                   </div>
                 </div>
               ))}

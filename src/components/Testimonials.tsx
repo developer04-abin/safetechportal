@@ -57,14 +57,14 @@ const testimonials: TestimonialItem[] = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-[#f8fafc] dark:bg-[#08080f] select-none border-b border-slate-200/50">
+    <section className="py-20 lg:py-24 bg-white dark:bg-[#06060c] select-none border-b border-slate-200/60 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title */}
         <div className="text-center mb-12">
-          <span className="font-space text-xs tracking-wider text-ictak-blue font-bold uppercase">CITIZEN FEEDBACK</span>
-          <h2 className="h2-scale font-space text-3xl font-bold text-slate-900 mt-2">
-            What the Community <span className="gradient-text-safetech">Says</span>
+          <span className="font-space text-xs tracking-wider text-ictak-blue dark:text-ictak-cyan font-bold uppercase">CITIZEN FEEDBACK</span>
+          <h2 className="h2-scale font-space text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">
+            What the Community <span className="text-ictak-cyan">Says</span>
           </h2>
         </div>
 
@@ -87,9 +87,9 @@ export default function Testimonials() {
           >
             {testimonials.map((test) => (
               <SwiperSlide key={test.id} className="h-auto">
-                <div className="h-full flex flex-col justify-between p-8 rounded-3xl bg-white border border-slate-200/60 safetech-card relative group text-left">
+                <div className="h-full flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 safetech-card relative group text-left shadow-md">
                   {/* Quote decoration */}
-                  <FaQuoteLeft className="absolute top-6 right-6 text-2xl text-slate-100 group-hover:text-ictak-cyan/10 transition-colors" />
+                  <FaQuoteLeft className="absolute top-6 right-6 text-2xl text-slate-100 dark:text-slate-800 group-hover:text-ictak-cyan/20 transition-colors" />
 
                   <div className="flex flex-col gap-4">
                     {/* Stars */}
@@ -100,25 +100,25 @@ export default function Testimonials() {
                     </div>
 
                     {/* Quote */}
-                    <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-light italic">
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-350 leading-relaxed font-light italic">
                       "{test.quote}"
                     </p>
                   </div>
 
                   {/* Profile info footer */}
-                  <div className="flex items-center gap-4 mt-8 border-t border-slate-100 pt-4">
+                  <div className="flex items-center gap-4 mt-8 border-t border-slate-100 dark:border-slate-800 pt-4">
                     <img 
                       src={test.image} 
                       alt={test.name} 
-                      className="w-12 h-12 rounded-full object-cover border border-slate-200"
+                      className="w-12 h-12 rounded-full object-cover border border-slate-200 dark:border-slate-700"
                       loading="lazy"
                     />
                     <div className="flex flex-col">
-                      <h4 className="font-space text-sm font-bold text-slate-800 group-hover:text-ictak-cyan transition-colors">
+                      <h4 className="font-space text-sm font-bold text-slate-900 dark:text-white group-hover:text-ictak-cyan transition-colors">
                         {test.name}
                       </h4>
-                      <span className="text-[10px] text-slate-400 font-sans mt-0.5 font-medium">
-                        {test.role}, <span className="text-ictak-blue">{test.affiliation}</span>
+                      <span className="text-[10px] text-slate-400 dark:text-slate-400 font-sans mt-0.5 font-medium">
+                        {test.role}, <span className="text-ictak-blue dark:text-ictak-cyan">{test.affiliation}</span>
                       </span>
                     </div>
                   </div>

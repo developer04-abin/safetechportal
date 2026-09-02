@@ -163,35 +163,39 @@ export default function CyberQuiz({ language }: CyberQuizProps) {
   };
 
   return (
-    <section id="cyber-quiz" className="py-20 bg-slate-50 dark:bg-slate-900 border-b border-slate-200/50">
+    <section id="cyber-quiz" className="py-20 lg:py-24 bg-slate-50 dark:bg-[#06060c] border-b border-slate-200/60 dark:border-slate-800">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="h2-scale font-space text-3xl font-bold text-slate-900 tracking-tight">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ictak-cyan/10 border border-ictak-cyan/20 text-ictak-cyan text-[11px] font-space font-bold uppercase tracking-wider mb-3">
+            <FiAward />
+            <span>Interactive Cyber Assessment</span>
+          </div>
+          <h2 className="h2-scale font-space text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
             {t.quizTitle}
           </h2>
-          <p className="text-sm text-slate-500 font-light mt-2">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-light mt-2 max-w-xl mx-auto leading-relaxed">
             {t.quizSubtitle}
           </p>
         </div>
 
         {/* Card Quiz Panel */}
-        <div className="safetech-card p-6 sm:p-10 rounded-3xl bg-white border-slate-200/60 shadow-md">
+        <div className="safetech-card p-6 sm:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xl">
           {currentIdx === -1 ? (
             /* Intro State */
             <div className="text-center py-6 flex flex-col items-center gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-ictak-blue/5 text-ictak-blue border border-ictak-blue/10 flex items-center justify-center text-3xl">
+              <div className="w-16 h-16 rounded-2xl bg-ictak-blue/5 dark:bg-ictak-cyan/10 text-ictak-blue dark:text-ictak-cyan border border-ictak-blue/10 dark:border-ictak-cyan/20 flex items-center justify-center text-3xl">
                 <FiAward />
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed max-w-md">
+              <p className="text-slate-600 dark:text-slate-350 text-xs sm:text-sm leading-relaxed max-w-md">
                 {language === 'en'
                   ? "Test your digital safety knowledge! Answer these 5 real-life scenario questions to understand your cyber vulnerability."
                   : "നിങ്ങളുടെ ഡിജിറ്റൽ സുരക്ഷാ അറിവ് പരീക്ഷിക്കൂ! സൈബർ സുരക്ഷിതരാണോ എന്ന് വിലയിരുത്താൻ 5 ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകുക."}
               </p>
               <button
                 onClick={start}
-                className="px-8 py-3 rounded-xl bg-ictak-blue hover:bg-ictak-blue/90 text-white font-space font-bold uppercase tracking-wider text-sm cursor-pointer shadow-sm"
+                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-ictak-blue to-ictak-cyan hover:opacity-95 text-white font-space font-bold uppercase tracking-wider text-xs sm:text-sm cursor-pointer shadow-md transition"
               >
                 {t.startQuiz}
               </button>
@@ -200,33 +204,33 @@ export default function CyberQuiz({ language }: CyberQuizProps) {
             /* Question State */
             <div>
               {/* Progress bar */}
-              <div className="flex justify-between items-center text-xs text-slate-400 font-mono mb-4">
+              <div className="flex justify-between items-center text-xs text-slate-400 dark:text-slate-500 font-mono mb-4">
                 <span>{t.question} {currentIdx + 1} / {quizQuestions.length}</span>
-                <span>Score: {score}</span>
+                <span className="font-bold text-ictak-cyan">Score: {score}</span>
               </div>
-              <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mb-8">
+              <div className="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden mb-8">
                 <div
-                  className="bg-ictak-cyan h-full transition-all duration-300"
+                  className="bg-gradient-to-r from-ictak-blue to-ictak-cyan h-full transition-all duration-300"
                   style={{ width: `${((currentIdx + 1) / quizQuestions.length) * 100}%` }}
                 />
               </div>
 
               {/* Question Text */}
-              <h3 className="h3-scale text-base sm:text-lg font-bold text-slate-900 font-space mb-6">
+              <h3 className="h3-scale text-base sm:text-lg font-bold text-slate-900 dark:text-white font-space mb-6 leading-snug text-left">
                 {language === 'en' ? quizQuestions[currentIdx].questionEn : quizQuestions[currentIdx].questionMl}
               </h3>
 
               {/* Options */}
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3.5">
                 {(language === 'en' ? quizQuestions[currentIdx].optionsEn : quizQuestions[currentIdx].optionsMl).map((option, oIdx) => {
                   const isSelected = selectedAns === oIdx;
                   const isCorrect = oIdx === quizQuestions[currentIdx].correctAnswer;
                   
-                  let optStyle = "border-slate-200 hover:bg-slate-50";
+                  let optStyle = "border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200";
                   if (isAnswered) {
-                    if (isCorrect) optStyle = "bg-green-50 border-green-500 text-green-800";
-                    else if (isSelected) optStyle = "bg-red-50 border-red-500 text-red-800";
-                    else optStyle = "opacity-60 border-slate-150";
+                    if (isCorrect) optStyle = "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-800 dark:text-emerald-300 font-bold";
+                    else if (isSelected) optStyle = "bg-red-50 dark:bg-red-950/40 border-red-500 text-red-800 dark:text-red-300 font-bold";
+                    else optStyle = "opacity-50 border-slate-200 dark:border-slate-800 text-slate-500";
                   }
 
                   return (
@@ -234,11 +238,11 @@ export default function CyberQuiz({ language }: CyberQuizProps) {
                       key={oIdx}
                       disabled={isAnswered}
                       onClick={() => handleAnswerSelect(oIdx)}
-                      className={`w-full text-left px-5 py-4 border rounded-xl text-xs sm:text-sm font-medium transition cursor-pointer flex justify-between items-center ${optStyle}`}
+                      className={`w-full text-left px-5 py-4 border rounded-2xl text-xs sm:text-sm font-medium transition cursor-pointer flex justify-between items-center ${optStyle}`}
                     >
                       <span>{option}</span>
-                      {isAnswered && isCorrect && <FiCheck className="text-green-600 text-lg shrink-0" />}
-                      {isAnswered && isSelected && !isCorrect && <FiX className="text-red-600 text-lg shrink-0" />}
+                      {isAnswered && isCorrect && <FiCheck className="text-emerald-500 text-lg shrink-0" />}
+                      {isAnswered && isSelected && !isCorrect && <FiX className="text-red-500 text-lg shrink-0" />}
                     </button>
                   );
                 })}
@@ -246,9 +250,9 @@ export default function CyberQuiz({ language }: CyberQuizProps) {
 
               {/* Explanation Panel */}
               {isAnswered && (
-                <div className="mt-8 p-4 rounded-xl bg-slate-50 border border-slate-100 text-xs text-slate-600 text-left">
-                  <span className="font-bold text-slate-800 block mb-1">
-                    {language === 'en' ? "Explanation:" : "വിശദീകരണം:"}
+                <div className="mt-6 p-4 rounded-2xl bg-cyan-50/50 dark:bg-slate-800 border border-cyan-100 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300 text-left leading-relaxed">
+                  <span className="font-bold text-ictak-blue dark:text-ictak-cyan block mb-1 font-space uppercase text-[10px] tracking-wider">
+                    {language === 'en' ? "Security Insight / Explanation:" : "സുരക്ഷാ വിശദീകരണം:"}
                   </span>
                   {language === 'en' ? quizQuestions[currentIdx].explanationEn : quizQuestions[currentIdx].explanationMl}
                 </div>
@@ -257,8 +261,8 @@ export default function CyberQuiz({ language }: CyberQuizProps) {
               {/* Next Button */}
               {isAnswered && (
                 <button
-                  onClick={currentIdx === quizQuestions.length - 1 ? handleNext : handleNext}
-                  className="w-full mt-6 py-3.5 bg-ictak-blue hover:bg-ictak-blue/90 text-white rounded-xl font-space font-bold uppercase text-xs sm:text-sm tracking-wider cursor-pointer"
+                  onClick={handleNext}
+                  className="w-full mt-6 py-3.5 bg-gradient-to-r from-ictak-blue to-ictak-cyan hover:opacity-95 text-white rounded-xl font-space font-bold uppercase text-xs sm:text-sm tracking-wider cursor-pointer shadow-md transition"
                 >
                   {currentIdx === quizQuestions.length - 1 ? t.finish : t.next}
                 </button>
@@ -266,29 +270,29 @@ export default function CyberQuiz({ language }: CyberQuizProps) {
             </div>
           ) : (
             /* Results State */
-            <div className="text-center flex flex-col items-center gap-6">
-              <div className="w-16 h-16 rounded-full bg-ictak-cyan/10 text-ictak-cyan flex items-center justify-center text-3xl">
+            <div className="text-center flex flex-col items-center gap-6 py-4">
+              <div className="w-16 h-16 rounded-full bg-ictak-cyan/10 border border-ictak-cyan/20 text-ictak-cyan flex items-center justify-center text-3xl">
                 <FiAward />
               </div>
               <div className="flex flex-col gap-1">
-                <h3 className="h3-scale text-xl font-bold font-space text-slate-900">
+                <h3 className="h3-scale text-xl sm:text-2xl font-bold font-space text-slate-900 dark:text-white">
                   {language === 'en' ? 'Assessment Completed!' : 'ക്വിസ് പൂർത്തിയായി!'}
                 </h3>
-                <span className="text-sm text-slate-600 font-space font-bold">
-                  {t.quizScore}: {score} / {quizQuestions.length}
+                <span className="text-sm text-slate-600 dark:text-slate-300 font-space font-bold mt-1">
+                  {t.quizScore}: <span className="text-ictak-cyan text-base">{score}</span> / {quizQuestions.length}
                 </span>
               </div>
 
               {/* Course Recommendations */}
-              <div className="w-full max-w-md border border-slate-200 rounded-2xl p-5 text-left bg-slate-50 mt-2">
+              <div className="w-full max-w-md border border-slate-200 dark:border-slate-700/80 rounded-2xl p-5 text-left bg-slate-50 dark:bg-slate-800/70 mt-2">
                 <span className="text-[10px] font-space tracking-wider uppercase font-bold text-ictak-cyan flex items-center gap-1.5 mb-2">
                   <FiBook />
                   {t.recommendation}
                 </span>
-                <h4 className="font-bold text-sm text-slate-800 font-space mb-1.5">
+                <h4 className="font-bold text-sm text-slate-900 dark:text-white font-space mb-1.5">
                   {getLmsRecommendation().title}
                 </h4>
-                <p className="text-xs text-slate-500 font-light leading-relaxed mb-4">
+                <p className="text-xs text-slate-600 dark:text-slate-350 font-light leading-relaxed mb-4">
                   {getLmsRecommendation().desc}
                 </p>
                 <a
@@ -297,7 +301,7 @@ export default function CyberQuiz({ language }: CyberQuizProps) {
                     e.preventDefault();
                     document.querySelector(getLmsRecommendation().link)?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="w-full py-2.5 bg-ictak-blue text-white rounded-xl font-space font-bold text-xs uppercase tracking-wider block text-center cursor-pointer hover:bg-ictak-blue/90 shadow-sm"
+                  className="w-full py-2.5 bg-gradient-to-r from-ictak-blue to-ictak-cyan text-white rounded-xl font-space font-bold text-xs uppercase tracking-wider block text-center cursor-pointer hover:opacity-95 shadow-sm transition"
                 >
                   {t.viewLms}
                 </a>
@@ -305,7 +309,7 @@ export default function CyberQuiz({ language }: CyberQuizProps) {
 
               <button
                 onClick={start}
-                className="mt-2 text-xs font-bold font-space uppercase text-slate-500 hover:text-ictak-blue cursor-pointer"
+                className="mt-2 text-xs font-bold font-space uppercase text-slate-500 dark:text-slate-400 hover:text-ictak-cyan cursor-pointer transition"
               >
                 {t.retry}
               </button>

@@ -67,11 +67,11 @@ export default function Chatbot({ language }: ChatbotProps) {
       
       {/* Expanded Chat Widget */}
       {isOpen && (
-        <div className="w-80 sm:w-96 h-[450px] rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/20 shadow-2xl flex flex-col justify-between overflow-hidden mb-4 transition-all duration-300">
+        <div className="w-80 sm:w-96 h-[460px] rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col justify-between overflow-hidden mb-4 transition-all duration-300">
           {/* Header */}
-          <div className="bg-ictak-blue p-4 text-white flex justify-between items-center">
+          <div className="bg-gradient-to-r from-ictak-blue to-cyan-700 p-4 text-white flex justify-between items-center">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
               <span className="font-space font-bold text-xs uppercase tracking-wider">{t.botTitle}</span>
             </div>
             <button
@@ -84,7 +84,7 @@ export default function Chatbot({ language }: ChatbotProps) {
           </div>
 
           {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3.5 bg-slate-50/50">
+          <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3.5 bg-slate-50/70 dark:bg-slate-950/80">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
@@ -93,10 +93,10 @@ export default function Chatbot({ language }: ChatbotProps) {
                 }`}
               >
                 <div
-                  className={`p-3 rounded-2xl text-xs leading-relaxed text-left whitespace-pre-line shadow-sm border ${
+                  className={`p-3.5 rounded-2xl text-xs leading-relaxed text-left whitespace-pre-line shadow-sm border ${
                     msg.sender === 'user'
-                      ? 'bg-ictak-blue border-ictak-blue text-white rounded-tr-none'
-                      : 'bg-white border-slate-200 text-slate-800 rounded-tl-none'
+                      ? 'bg-gradient-to-r from-ictak-blue to-cyan-700 border-transparent text-white rounded-tr-none'
+                      : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 rounded-tl-none'
                   }`}
                 >
                   {msg.text}
@@ -106,28 +106,28 @@ export default function Chatbot({ language }: ChatbotProps) {
           </div>
 
           {/* Quick Actions Guide buttons inside chat */}
-          <div className="p-2 bg-slate-100/50 border-t border-slate-100 flex flex-wrap gap-1.5 justify-start">
+          <div className="p-2.5 bg-slate-100/70 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1.5 justify-start">
             <button
               onClick={() => handleSendMessage(t.botFreezeBank)}
-              className="px-2.5 py-1 text-[10px] font-semibold bg-white border border-slate-200 rounded-full hover:bg-ictak-cyan/10 hover:border-ictak-cyan transition text-slate-700 cursor-pointer"
+              className="px-2.5 py-1 text-[10px] font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-ictak-cyan/10 hover:border-ictak-cyan transition text-slate-700 dark:text-slate-300 cursor-pointer"
             >
               {t.botFreezeBank}
             </button>
             <button
               onClick={() => handleSendMessage(t.botBlockSim)}
-              className="px-2.5 py-1 text-[10px] font-semibold bg-white border border-slate-200 rounded-full hover:bg-ictak-cyan/10 hover:border-ictak-cyan transition text-slate-700 cursor-pointer"
+              className="px-2.5 py-1 text-[10px] font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-ictak-cyan/10 hover:border-ictak-cyan transition text-slate-700 dark:text-slate-300 cursor-pointer"
             >
               {t.botBlockSim}
             </button>
             <button
               onClick={() => handleSendMessage(t.botReportFraud)}
-              className="px-2.5 py-1 text-[10px] font-semibold bg-white border border-slate-200 rounded-full hover:bg-ictak-cyan/10 hover:border-ictak-cyan transition text-slate-700 cursor-pointer"
+              className="px-2.5 py-1 text-[10px] font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-ictak-cyan/10 hover:border-ictak-cyan transition text-slate-700 dark:text-slate-300 cursor-pointer"
             >
               {t.botReportFraud}
             </button>
             <a
               href="tel:1930"
-              className="px-2.5 py-1 text-[10px] font-bold bg-red-50 text-emergency-red border border-red-100 rounded-full hover:bg-red-100 transition flex items-center gap-1 cursor-pointer"
+              className="px-2.5 py-1 text-[10px] font-bold bg-red-50 dark:bg-red-950/50 text-emergency-red border border-red-200 dark:border-red-900 rounded-full hover:bg-red-100 transition flex items-center gap-1 cursor-pointer"
             >
               <FiAlertOctagon />
               1930
@@ -140,18 +140,18 @@ export default function Chatbot({ language }: ChatbotProps) {
               e.preventDefault();
               handleSendMessage(inputText);
             }}
-            className="p-3 border-t border-slate-200 flex gap-2 bg-white"
+            className="p-3 border-t border-slate-200 dark:border-slate-800 flex gap-2 bg-white dark:bg-slate-900"
           >
             <input
               type="text"
               placeholder={t.botPlaceholder}
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
-              className="flex-grow px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:border-ictak-cyan text-slate-900"
+              className="flex-grow px-3 py-2 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:border-ictak-cyan text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500"
             />
             <button
               type="submit"
-              className="p-2 rounded-xl bg-ictak-blue hover:bg-ictak-blue/90 text-white flex items-center justify-center cursor-pointer shadow-sm"
+              className="p-2.5 rounded-xl bg-gradient-to-r from-ictak-blue to-ictak-cyan hover:opacity-95 text-white flex items-center justify-center cursor-pointer shadow-sm transition"
             >
               <FiSend className="text-xs" />
             </button>

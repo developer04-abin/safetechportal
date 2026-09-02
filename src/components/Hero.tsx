@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { useMousePosition } from '../hooks/useMousePosition';
 import bgVideo from '../assets/Gemini__New_chat_Search_chats.mp4';
 import Magnetic from './Magnetic';
@@ -15,6 +16,7 @@ interface HeroProps {
 export default function Hero({}: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mousePos = useMousePosition();
+  const navigate = useNavigate();
 
   // Parallax Scroll Effect
   const { scrollYProgress } = useScroll({
@@ -47,7 +49,7 @@ export default function Hero({}: HeroProps) {
   };
 
   const handleStartClubClick = () => {
-    document.querySelector('#clubs')?.scrollIntoView({ behavior: 'smooth' });
+    navigate('/clubs');
   };
 
   return (

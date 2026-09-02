@@ -60,21 +60,21 @@ const newsData: NewsCardItem[] = [
 export default function News({ language }: NewsProps) {
 
   return (
-    <section id="news" className="py-20 relative bg-slate-50 dark:bg-slate-900">
+    <section id="news" className="py-20 lg:py-24 relative bg-slate-50 dark:bg-[#06060c] border-b border-slate-200/60 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 text-left">
           <div>
-            <span className="font-space text-xs tracking-widest text-ictak-blue uppercase flex items-center gap-2 font-bold">
+            <span className="font-space text-xs tracking-widest text-ictak-blue dark:text-ictak-cyan uppercase flex items-center gap-2 font-bold mb-2">
               <BsBroadcast className="animate-pulse text-emergency-red" />
               {language === 'en' ? 'Announcements & Feed' : 'പ്രഖ്യാപനങ്ങളും അറിയിപ്പുകളും'}
             </span>
-            <h2 className="h2-scale font-space text-3xl sm:text-4xl font-bold text-slate-900 mt-2">
+            <h2 className="h2-scale font-space text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">
               {language === 'en' ? 'News, Events & Workshops' : 'വാർത്തകളും വർക്ക്ഷോപ്പുകളും'}
             </h2>
           </div>
-          <p className="text-xs sm:text-sm text-slate-500 max-w-sm font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-sm font-light leading-relaxed">
             {language === 'en'
               ? 'Stay up to date with upcoming district level events, Master ToT sessions, and KSITM campaign updates.'
               : 'ജില്ലാതല വർക്ക്ഷോപ്പുകൾ, മാസ്റ്റർ ട്രെയിനർ ഷെഡ്യൂളുകൾ, കെഎസ്‌ഐടിഎം അറിയിപ്പുകൾ എന്നിവ അറിയാം.'}
@@ -90,10 +90,10 @@ export default function News({ language }: NewsProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col justify-between rounded-3xl overflow-hidden bg-white border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300"
+              className="group flex flex-col justify-between rounded-3xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 shadow-md hover:shadow-xl transition-all duration-300"
             >
               {/* Image Header */}
-              <div className="h-48 md:h-52 w-full overflow-hidden relative">
+              <div className="h-48 md:h-52 w-full overflow-hidden relative border-b border-slate-100 dark:border-slate-800">
                 <img 
                   src={news.image} 
                   alt={language === 'en' ? news.headlineEn : news.headlineMl} 
@@ -101,7 +101,7 @@ export default function News({ language }: NewsProps) {
                   loading="lazy"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-2.5 py-1 text-[10px] font-space font-bold uppercase tracking-wider bg-ictak-blue text-white rounded-md">
+                  <span className="px-3 py-1 text-[10px] font-space font-bold uppercase tracking-wider bg-gradient-to-r from-ictak-blue to-cyan-700 text-white rounded-full shadow-md">
                     {language === 'en' ? news.categoryEn : news.categoryMl}
                   </span>
                 </div>
@@ -109,23 +109,23 @@ export default function News({ language }: NewsProps) {
 
               {/* Body */}
               <div className="p-6 flex flex-col gap-3 flex-grow text-left">
-                <span className="text-[10px] font-space text-slate-400 font-semibold uppercase">
+                <span className="text-[10px] font-space text-slate-400 dark:text-slate-500 font-semibold uppercase">
                   {language === 'en' ? news.dateEn : news.dateMl}
                 </span>
 
-                <h3 className="h3-scale text-base font-bold text-slate-900 group-hover:text-ictak-cyan transition-colors duration-300 leading-snug line-clamp-2">
+                <h3 className="h3-scale text-base font-bold text-slate-900 dark:text-white group-hover:text-ictak-cyan transition-colors duration-300 leading-snug line-clamp-2">
                   {language === 'en' ? news.headlineEn : news.headlineMl}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-slate-500 font-light leading-relaxed line-clamp-3">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-350 font-light leading-relaxed line-clamp-3">
                   {language === 'en' ? news.descriptionEn : news.descriptionMl}
                 </p>
               </div>
 
               {/* Read More Footer */}
               <div className="p-6 pt-0">
-                <button className="w-full py-2.5 rounded-xl border border-slate-200 hover:border-ictak-cyan bg-slate-50 hover:bg-ictak-cyan/10 font-space text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-ictak-blue flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer">
-                  {language === 'en' ? 'View Details' : 'വിവരങ്ങൾ കാണുക'}
+                <button className="w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 group-hover:border-ictak-cyan bg-slate-50 dark:bg-slate-800 group-hover:bg-ictak-cyan/10 font-space text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200 group-hover:text-ictak-blue dark:group-hover:text-ictak-cyan flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer">
+                  <span>{language === 'en' ? 'View Details' : 'വിവരങ്ങൾ കാണുക'}</span>
                   <BsArrowUpRight className="text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                 </button>
               </div>
