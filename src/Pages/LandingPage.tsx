@@ -6,7 +6,7 @@ import { useLayoutContext } from '../components/RootLayout';
 // Lazy load below-the-fold components for performance
 const Statistics = lazy(() => import('../components/Statistics'));
 const FeaturedEvents = lazy(() => import('../components/FeaturedEvents'));
-const AudienceRouting = lazy(() => import('../components/AudienceRouting'));
+// const AudienceRouting = lazy(() => import('../components/AudienceRouting'));
 const Pledge = lazy(() => import('../components/Pledge'));
 const ResourceHub = lazy(() => import('../components/ResourceHub'));
 const Videos = lazy(() => import('../components/Videos'));
