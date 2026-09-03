@@ -98,7 +98,7 @@ export default function AboutPage() {
           </div>
         }
       >
-        {/* Six Core Themes Grid */}
+        {/* Seven Core Themes Grid */}
         <FocusAreas language={language} />
 
         {/* Milestone Timeline */}

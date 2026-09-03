@@ -30,7 +30,7 @@ export const translations = {
     warriorsCertified: "Certified Jagratha Warriors",
 
     // Core Themes Grid
-    themesTitle: "The Six Core Themes of Digital Safety",
+    themesTitle: "The Seven Core Themes of Digital Safety",
     themesSubtitle: "Explore key pillars of our curriculum designed to foster digital literacy and safety.",
     theme1Title: "Cyber Hygiene",
     theme1Desc: "Best practices for securing devices, accounts, and personal information online.",
@@ -50,6 +50,9 @@ export const translations = {
     theme6Title: "Cyber Laws",
     theme6Desc: "Know your legal protections, reporting options, and cyber crime definitions.",
     theme6Details: "Familiarize yourself with the IT Act, sections covering online harassment, financial fraud, identity theft, and know how to report them legally.",
+    theme7Title: "Responsible Mobile Usage",
+    theme7Desc: "Guidelines for mindful smartphone habits, app permissions hygiene, and safe communication.",
+    theme7Details: "Manage notifications and screen time, audit app permissions regularly, avoid downloading APKs from untrusted sources, secure wireless connections, and refrain from mobile usage while driving or before sleep.",
 
     // Audience Routing Section
     routingTitle: "Tailored Resource Pathways",
@@ -171,7 +174,7 @@ export const translations = {
     warriorsCertified: "സർട്ടിഫൈഡ് ജാഗ്രതാ വാരിയേഴ്സ്",
 
     // Core Themes Grid
-    themesTitle: "ഡിജിറ്റൽ സുരക്ഷയുടെ ആറ് പ്രധാന തീമുകൾ",
+    themesTitle: "ഡിജിറ്റൽ സുരക്ഷയുടെ ഏഴ് പ്രധാന തീമുകൾ",
     themesSubtitle: "ഡിജിറ്റൽ സാക്ഷരതയും സുരക്ഷിതത്വവും വളർത്തുന്നതിനായി തയ്യാറാക്കിയ പാഠ്യപദ്ധതിയുടെ പ്രധാന സ്തംഭങ്ങൾ.",
     theme1Title: "സൈബർ ശുചിത്വം (Cyber Hygiene)",
     theme1Desc: "ഡിവൈസുകളും അക്കൗണ്ടുകളും വ്യക്തിഗത വിവരങ്ങളും സുരക്ഷിതമാക്കുന്നതിനുള്ള മികച്ച രീതികൾ.",
@@ -191,6 +194,9 @@ export const translations = {
     theme6Title: "സൈബർ നിയമങ്ങൾ",
     theme6Desc: "നിങ്ങളുടെ നിയമപരമായ സംരക്ഷണങ്ങൾ, റിപ്പോർട്ടിംഗ് ഓപ്ഷനുകൾ, സൈബർ കുറ്റകൃത്യ നിർവചനങ്ങൾ എന്നിവ അറിയുക.",
     theme6Details: "ഐടി ആക്ട്, ഓൺലൈൻ പീഡനം, സാമ്പത്തിക തട്ടിപ്പ്, ഐഡന്റിറ്റി മോഷണം എന്നിവ ഉൾക്കൊള്ളുന്ന നിയമങ്ങളെക്കുറിച്ച് അറിയുക.",
+    theme7Title: "ഉത്തരവാദിത്തമുള്ള മൊബൈൽ ഉപയോഗം (Responsible Mobile Usage)",
+    theme7Desc: "സ്മാർട്ട്ഫോൺ ഉപയോഗത്തിലെ നല്ല ശീലങ്ങൾ, ആപ്പ് സുരക്ഷ, സുരക്ഷിതമായ മൊബൈൽ ആശയവിനിമയം എന്നിവയ്ക്കുള്ള മാർഗ്ഗനിർദ്ദേശങ്ങൾ.",
+    theme7Details: "നോട്ടിഫിക്കേഷനുകളും സ്ക്രീൻ സമയവും നിയന്ത്രിക്കുക, ആപ്പ് അനുമതികൾ കൃത്യമായി പരിശോധിക്കുക, വിശ്വസനീയമല്ലാത്ത സ്രോതസ്സുകളിൽ നിന്ന് APK ഫയലുകൾ ഡൗൺലോഡ് ചെയ്യരുത്, ബ്ലൂടൂത്ത്/NFC സുരക്ഷിതമാക്കുക, ഡ്രൈവിംഗ് ചെയ്യുമ്പോഴോ രാത്രി വൈകിയോ മൊബൈൽ ഉപയോഗിക്കുന്നത് ഒഴിവാക്കുക.",
 
     // Audience Routing Section
     routingTitle: "നിങ്ങൾക്കായുള്ള പ്രത്യേക പാഠ്യപദ്ധതികൾ",

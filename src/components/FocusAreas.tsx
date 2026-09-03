@@ -4,7 +4,7 @@ import { translations } from '../utils/translations';
 import { 
   FiShield, FiDollarSign, FiSmile, 
   FiFileText, FiLock, FiBookOpen, 
-  FiCheckCircle, FiX, FiArrowRight, FiArrowLeft, FiCheck
+  FiSmartphone, FiCheckCircle, FiX, FiArrowRight, FiArrowLeft, FiCheck
 } from 'react-icons/fi';
 
 interface FocusAreasProps {
@@ -187,6 +187,32 @@ export default function FocusAreas({ language }: FocusAreasProps) {
             "നിയമനടപടികൾക്കായി സ്ക്രീൻഷോട്ടുകളും തെളിവുകളും കൃത്യമായി സൂക്ഷിക്കുക."
           ]
     },
+    {
+      id: 7,
+      title: (t as any).theme7Title || (language === 'en' ? "Responsible Mobile Usage" : "ഉത്തരവാദിത്തമുള്ള മൊബൈൽ ഉപയോഗം"),
+      description: (t as any).theme7Desc || (language === 'en' ? "Guidelines for mindful smartphone habits, app permissions hygiene, and safe communication." : "സ്മാർട്ട്ഫോൺ ഉപയോഗത്തിലെ നല്ല ശീലങ്ങൾ, ആപ്പ് സുരക്ഷ, സുരക്ഷിതമായ മൊബൈൽ ആശയവിനിമയം എന്നിവയ്ക്കുള്ള മാർഗ്ഗനിർദ്ദേശങ്ങൾ."),
+      details: (t as any).theme7Details || (language === 'en' ? "Manage notifications and screen time, audit app permissions regularly, avoid downloading APKs from untrusted sources, secure wireless connections, and refrain from mobile usage while driving or before sleep." : "നോട്ടിഫിക്കേഷനുകളും സ്ക്രീൻ സമയവും നിയന്ത്രിക്കുക, ആപ്പ് അനുമതികൾ കൃത്യമായി പരിശോധിക്കുക, വിശ്വസനീയമല്ലാത്ത സ്രോതസ്സുകളിൽ നിന്ന് APK ഫയലുകൾ ഡൗൺലോഡ് ചെയ്യരുത്, ബ്ലൂടൂത്ത്/NFC സുരക്ഷിതമാക്കുക, ഡ്രൈവിംഗ് ചെയ്യുമ്പോഴോ രാത്രി വൈകിയോ മൊബൈൽ ഉപയോഗിക്കുന്നത് ഒഴിവാക്കുക."),
+      icon: FiSmartphone,
+      tag: "MOBILE RESILIENCE",
+      tagMl: "മൊബൈൽ സുരക്ഷ",
+      color: "text-teal-600 dark:text-teal-400",
+      bgLight: "bg-teal-50",
+      bgDark: "dark:bg-teal-950/40",
+      borderColor: "border-teal-200 dark:border-teal-800/40",
+      tips: language === 'en' 
+        ? [
+            "Avoid side-loading untrusted APK files or granting root permissions to unknown applications.",
+            "Disable Bluetooth, Wi-Fi hotspot, and NFC when not in active use to prevent unauthorized pairing.",
+            "Audit installed app permissions periodically and revoke unnecessary access to camera, mic, and contacts.",
+            "Strictly avoid smartphone usage while driving, and establish no-screen zones during meals and sleep hours."
+          ] 
+        : [
+            "അപരിചിതമായ ആപ്പുകൾ/APK ഫയലുകൾ ഇൻസ്റ്റാൾ ചെയ്യുകയോ അനാവശ്യ അനുമതികൾ നൽകുകയോ ചെയ്യരുത്.",
+            "ഉപയോഗമില്ലാത്ത സമയങ്ങളിൽ ബ്ലൂടൂത്ത്, വൈഫൈ ഹോട്ട്സ്പോട്ട്, NFC എന്നിവ ഓഫ് ചെയ്തിടുക.",
+            "മൊബൈൽ ആപ്പുകളുടെ അനുമതികൾ കൃത്യമായി പരിശോധിച്ച് അനാവശ്യ ആക്സസുകൾ റദ്ദാക്കുക.",
+            "വാഹനം ഓടിക്കുമ്പോഴുള്ള മൊബൈൽ ഉപയോഗം കർശനമായി ഒഴിവാക്കുക, ഉറങ്ങുന്നതിന് മുമ്പ് ഫോൺ മാറ്റിവെക്കുക."
+          ]
+    },
   ];
 
   // Close modal on Escape key
@@ -230,8 +256,8 @@ export default function FocusAreas({ language }: FocusAreasProps) {
           </p>
         </div>
 
-        {/* 3x2 Grid with Fixed Equal Height Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 7 Core Themes Grid with Fixed Equal Height Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {themes.map((theme) => {
             const Icon = theme.icon;
             return (

@@ -40,14 +40,14 @@ export default function LandingPage() {
         <FeaturedEvents />
 
         {/* Tailored Demographics Pathways (Students, Parents, Seniors) */}
-        <div id="audience-routing">
+        {/* <div id="audience-routing">
           <AudienceRouting
             language={language}
             onNavigateToQuiz={() => {
               document.querySelector('#cyber-quiz')?.scrollIntoView({ behavior: 'smooth' });
             }}
           />
-        </div>
+        </div> */}
 
         {/* Interactive Digital Citizen Pledge */}
         <Pledge language={language} onPledgeTaken={incrementPledge} />
