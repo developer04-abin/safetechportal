@@ -6,7 +6,7 @@ import bgVideo from '../assets/Gemini__New_chat_Search_chats.mp4';
 import Magnetic from './Magnetic';
 import { HiOutlineArrowDown } from 'react-icons/hi';
 import { BsPlayCircle } from 'react-icons/bs';
-import { IoShieldCheckmark, IoSparkles } from 'react-icons/io5';
+import { IoShieldCheckmark } from 'react-icons/io5';
 
 interface HeroProps {
   onRegisterClick?: () => void;

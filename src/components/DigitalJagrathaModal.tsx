@@ -3,12 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   IoClose, 
   IoCheckmarkCircle, 
-  IoShieldCheckmark, 
   IoSchoolOutline, 
   IoLocationOutline, 
   IoPersonOutline, 
-  IoMailOutline, 
-  IoRibbonOutline, 
+  IoMailOutline,  
   IoCopyOutline,
   IoDownloadOutline
 } from 'react-icons/io5';
