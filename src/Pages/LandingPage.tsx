@@ -1,6 +1,4 @@
 import { Suspense, lazy, useState } from 'react';
-import { motion } from 'framer-motion';
-import { IoShieldCheckmark, IoSparkles, IoRibbonOutline, IoSchoolOutline, IoPeopleOutline } from 'react-icons/io5';
 import Hero from '../components/Hero';
 import Marqueue from '../components/Marqueue';
 import DigitalJagrathaModal from '../components/DigitalJagrathaModal';
