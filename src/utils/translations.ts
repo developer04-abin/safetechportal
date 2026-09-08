@@ -134,7 +134,7 @@ export const translations = {
     botOpen: "Cyber SOS Chatbot",
 
     // Footer
-    footerDisclaimer: "SafeTech Kerala is a joint initiative of ICTAK, KSITM, and Kerala Police Cyberdome. If you have been a victim of cyber crime, call 1930 immediately or visit cybercrime.gov.in.",
+    footerDisclaimer: "SafeTech Kerala is a joint initiative of Goverment of Keralam and KSITM. If you have been a victim of cyber crime, call 1930 immediately or visit cybercrime.gov.in.",
     emergencyHeader: "Emergency Helpline: Call 1930",
     emergencySub: "Active 24/7. Immediate assistance for cyber financial fraud.",
     privacyPolicy: "Privacy Policy",
@@ -278,7 +278,7 @@ export const translations = {
     botOpen: "സൈബർ SOS ചാറ്റ്ബോട്ട്",
 
     // Footer
-    footerDisclaimer: "ICTAK, KSITM, കേരള പോലീസ് സൈബർഡോം എന്നിവരുടെ സംയുക്ത സംരംഭമാണ് സേഫ്ടെക് കേരള. നിങ്ങൾ സൈബർ തട്ടിപ്പിനിരയായാൽ ഉടൻ 1930 വിളിക്കുക അല്ലെങ്കിൽ cybercrime.gov.in സന്ദർശിക്കുക.",
+    footerDisclaimer: "കേരള സർക്കാർ, KSITM എന്നിവരുടെ സംയുക്ത സംരംഭമാണ് സേഫ്ടെക് കേരള. നിങ്ങൾ സൈബർ തട്ടിപ്പിനിരയായാൽ ഉടൻ 1930 വിളിക്കുക അല്ലെങ്കിൽ cybercrime.gov.in സന്ദർശിക്കുക.",
     emergencyHeader: "അടിയന്തര ഹെൽപ്പ് ലൈൻ: വിളിക്കുക 1930",
     emergencySub: "24/7 ലഭ്യമാണ്. സൈബർ സാമ്പത്തിക തട്ടിപ്പുകൾക്ക് ഉടനടി സഹായം.",
     privacyPolicy: "സ്വകാര്യതാ നയം",

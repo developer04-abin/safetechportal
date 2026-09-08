@@ -664,7 +664,7 @@ export default function DigitalJagrathaModal({ isOpen, onClose }: DigitalJagrath
                       </div>
 
                       <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[10px] text-slate-400">
-                        <span>Authenticated by Goverment of Keralam • KSITM • CYBERDOME</span>
+                        <span>Authenticated by Goverment of Keralam • KSITM</span>
                         <button
                           onClick={handleCopyId}
                           className="flex items-center gap-1 text-ictak-cyan hover:text-white transition cursor-pointer font-space"

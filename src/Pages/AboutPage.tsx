@@ -45,7 +45,7 @@ export default function AboutPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-8"
             >
-              SafeTech Kerala is a government-backed collaborative cyber literacy and digital hygiene movement driven by Goverment of Keralam, Kerala State IT Mission (KSITM), and Kerala Police Cyberdome.
+              SafeTech Kerala is a government-backed collaborative cyber literacy and digital hygiene movement driven by Goverment of Keralam and Kerala State IT Mission (KSITM).
             </motion.p>
           </div>
 

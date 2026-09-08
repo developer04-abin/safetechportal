@@ -207,7 +207,7 @@ export default function RootLayout() {
                 </div>
 
                 <div className="mt-6 text-[10px] text-slate-400 text-center font-light leading-relaxed">
-                  Provided in partnership with Kerala Police Cyberdome and KSITM. Secure connection.
+                  Provided in partnership with Goverment of Keralam and KSITM. Secure connection.
                 </div>
               </div>
             </div>

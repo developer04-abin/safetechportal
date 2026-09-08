@@ -55,7 +55,7 @@ const photoGallery: PhotoItem[] = [
   {
     id: 8,
     src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
-    title: "Joint Committee (KSITM-Police)",
+    title: "State Steering Committee Review",
     category: "Review"
   }
 ];

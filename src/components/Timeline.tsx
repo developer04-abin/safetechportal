@@ -49,7 +49,7 @@ const timelineData: TimelineItem[] = [
     period: 'NEXT',
     stepNum: 'Step 5',
     title: 'Master Training of Trainers (ToT)',
-    description: 'Selected coordinators undergo direct technical bootcamps led by Kerala Police Cyberdome and Goverment of Keralam training experts.',
+    description: 'Selected coordinators undergo direct technical bootcamps led by KSITM and Goverment of Keralam training experts.',
     outcome: 'Certified Cyber Guide Credentials',
   },
   {

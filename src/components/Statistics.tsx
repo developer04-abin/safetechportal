@@ -75,7 +75,7 @@ export default function Statistics({ language, pledgeCountDelta }: StatisticsPro
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="font-space text-xs tracking-wider text-ictak-blue dark:text-ictak-cyan font-bold uppercase">LIVE MISSION TELEMETRY</span>
+          {/* <span className="font-space text-xs tracking-wider text-ictak-blue dark:text-ictak-cyan font-bold uppercase">LIVE MISSION TELEMETRY</span> */}
           <h2 className="h2-scale font-space text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1">
             {t.impactTitle}
           </h2>

@@ -63,7 +63,7 @@ export default function LandingPage() {
               </h2>
 
               <p className="font-sans text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
-                Lead the state-wide cybersecurity & digital responsibility movement in your institution, panchayath, and municipality. Complete our 15-credit module, lead local digital safety workshops, and earn official credentials from Goverment of Keralam, KSITM, and Kerala Police Cyberdome.
+                Lead the state-wide cybersecurity & digital responsibility movement in your institution, panchayath, and municipality. Complete our 15-credit module, lead local digital safety workshops, and earn official credentials from Goverment of Keralam and KSITM.
               </p>
 
             
@@ -84,7 +84,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <span className="text-[11px] font-space font-bold text-white block">Govt Certification</span>
-                    <span className="text-[10px] text-slate-400 font-light block">Cyberdome Verified</span>
+                    <span className="text-[10px] text-slate-400 font-light block">KSITM Verified</span>
                   </div>
                 </div>
 

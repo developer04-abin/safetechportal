@@ -48,7 +48,7 @@ const testimonials: TestimonialItem[] = [
     id: 4,
     name: "Devon Chen",
     role: "Master ToT Trainer",
-    affiliation: "Police Cyberdome PMU Advisor",
+    affiliation: "State Cyber Safety Advisor",
     quote: "Validating the school workshop logs and managing the district active club telemetry is very intuitive. The campaign dashboard builds massive public trust through real-time feedback.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"

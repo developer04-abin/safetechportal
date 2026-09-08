@@ -105,7 +105,7 @@ export default function Footer({ language }: FooterProps) {
               KITE, Dept of Education
             </span>
             <span className="px-2.5 py-1.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700">
-              Kerala Police Cyberdome
+              Kerala State IT Mission
             </span>
           </div>
         </div>

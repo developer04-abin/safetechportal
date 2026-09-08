@@ -125,7 +125,7 @@ export default function Pledge({ language, onPledgeTaken }: PledgeProps) {
     // Signature Seals & logos representation
     ctx.fillStyle = '#94a3b8';
     ctx.font = '12px Inter, sans-serif';
-    ctx.fillText('Goverment of Keralam - KSITM - Cyberdome Joint Seal', canvas.width / 2, 430);
+    ctx.fillText('Goverment of Keralam - KSITM Joint Seal', canvas.width / 2, 430);
 
     // Signature lines
     ctx.strokeStyle = '#94a3b8';

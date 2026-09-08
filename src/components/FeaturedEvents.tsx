@@ -75,7 +75,7 @@ const featuredCampaigns: CampaignDetail[] = [
     description: "A customized anti-scam initiative for elders. Demystifies UPI payment fraud, fake electricity bill SMS, digital arrest threats, and pension KYC scams with simplified large-print guides and live helpline demonstrations.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
     seats: "Walk-in & Pre-registration",
-    organizer: "Kerala Police Cyberdome",
+    organizer: "State IT Department & KSITM",
     speakers: ["Sri. Ramesh Kumar (DSP Cyber Operations)", "Rita Vance (Financial Fraud Investigator)"],
     badge: "1930 Golden Hour Training",
     rating: 5.0,
@@ -92,7 +92,7 @@ const featuredCampaigns: CampaignDetail[] = [
     description: "Kerala's premier civic ethical hacking and Capture The Flag (CTF) tournament. Student engineers compete to detect web vulnerabilities, build defensive digital forensics tools, and win cash prizes with PMU internships.",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
     seats: "100 Teams Selected",
-    organizer: "Kerala Police Cyberdome & Goverment of Keralam",
+    organizer: "Goverment of Keralam & KSITM",
     speakers: ["Anand Mohan (Red Team Specialist)", "Divya Nambiar (Threat Intel Lead)"],
     badge: "₹2.5 Lakh Prize Pool",
     rating: 4.9,
@@ -160,7 +160,7 @@ const featuredCampaigns: CampaignDetail[] = [
     description: "Learn hands-on techniques to identify AI voice clones, manipulated video deepfakes, forwarded WhatsApp disinformation, and coordinated social media bots using open-source verification tools.",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
     seats: "Open Public Registration",
-    organizer: "Kerala Media Academy & Cyberdome",
+    organizer: "Kerala Media Academy & KSITM",
     speakers: ["Prasanth Nair (Media Forensics Analyst)", "Maya Joseph (Investigative Journalist)"],
     badge: "Fact-Check Toolkit",
     rating: 4.9,
@@ -316,7 +316,7 @@ export default function FeaturedEvents() {
               Flagship <span className="text-ictak-cyan">Campaigns & Events</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-xl mt-2 font-light leading-relaxed">
-              Discover our active campaign tracks and specialized workshops co-created with Kerala Police Cyberdome, KSITM, and academic partners.
+              Discover our active campaign tracks and specialized workshops co-created with Goverment of Keralam, KSITM, and academic partners.
             </p>
           </div>
 
