@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
-import { useScrollDirection } from '../hooks/useScrollDirection';
 import { translations } from '../utils/translations';
 import { HiOutlineSearch, HiMenu, HiX } from 'react-icons/hi';
 import { MdFormatSize } from 'react-icons/md';
@@ -29,7 +28,6 @@ export default function Header({
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const scrollDir = useScrollDirection();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -88,12 +86,10 @@ export default function Header({
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[40] transition-all duration-500 ease-in-out ${
-        scrollDir === 'down' && isScrolled ? '-translate-y-full' : 'translate-y-0'
-      } ${
+      className={`fixed top-0 left-0 right-0 z-[50] transition-all duration-300 ease-in-out translate-y-0 ${
         isScrolled
           ? 'py-2.5 bg-white/95 dark:bg-slate-950/95 shadow-md border-b border-slate-200/80 dark:border-slate-800 backdrop-blur-md'
-          : 'py-4 bg-white/80 dark:bg-black/60 backdrop-blur-md'
+          : 'py-4 bg-white/85 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200/40 dark:border-slate-800/40'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">

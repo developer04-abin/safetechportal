@@ -207,7 +207,7 @@ html:not(.dark) section:not(#home):not(#marqueue):not(footer):nth-of-type(even) 
   scroll-behavior: auto !important;
 }
 .lenis.lenis-smooth [data-lenis-prevent] {
-  overflow: clip;
+  overscroll-behavior: contain;
 }
 .lenis.lenis-stopped {
   overflow: hidden;

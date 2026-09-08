@@ -6,14 +6,16 @@ import bgVideo from '../assets/Gemini__New_chat_Search_chats.mp4';
 import Magnetic from './Magnetic';
 import { HiOutlineArrowDown } from 'react-icons/hi';
 import { BsPlayCircle } from 'react-icons/bs';
+import { IoShieldCheckmark, IoSparkles } from 'react-icons/io5';
 
 interface HeroProps {
   onRegisterClick?: () => void;
   onWatchHighlights?: () => void;
+  onRegisterAmbassador?: () => void;
   darkMode?: boolean;
 }
 
-export default function Hero({}: HeroProps) {
+export default function Hero({ onRegisterAmbassador }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mousePos = useMousePosition();
   const navigate = useNavigate();
@@ -103,16 +105,8 @@ export default function Hero({}: HeroProps) {
         style={{ y: textY, opacity }}
         className="relative z-10 text-left max-w-3xl px-6 md:px-12 mr-auto flex flex-col items-start gap-5 select-none"
       >
-        {/* Top Tagline Badge */}
-        {/* <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs md:text-sm font-space text-ictak-cyan uppercase tracking-widest shadow-md"
-        >
-          <span className="w-2 h-2 rounded-full bg-ictak-cyan animate-ping"></span>
-          Statewide Digital Security Mission
-        </motion.div> */}
+        {/* Top Tagline Badge - Quick Ambassador Callout */}
+     
 
         {/* Cinematic Headline - White Font */}
         <motion.h1
@@ -140,21 +134,26 @@ export default function Hero({}: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-wrap items-center gap-4 mt-4 w-full justify-start"
+          className="flex flex-wrap items-center gap-3.5 mt-4 w-full justify-start"
         >
-          <Magnetic strength={0.25} range={60}>
-            <button
-              onClick={handleChoosePathClick}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full text-sm font-space font-semibold uppercase tracking-wider text-white bg-white/5 hover:bg-white/10 glass-panel border-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
-            >
-              Choose Your Path
-            </button>
-          </Magnetic>
+          {/* Easy Access Ambassador Registration Button */}
+          {onRegisterAmbassador && (
+            <Magnetic strength={0.3} range={60}>
+              <button
+                onClick={onRegisterAmbassador}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full text-sm font-space font-bold uppercase tracking-wider text-white bg-gradient-to-r from-emerald-600 via-teal-500 to-ictak-cyan hover:shadow-[0_0_25px_rgba(0,180,216,0.5)] border border-ictak-cyan/40 cursor-pointer transition-all duration-300 flex items-center justify-center gap-2 group"
+              >
+                <IoShieldCheckmark className="text-lg text-emerald-200 group-hover:scale-110 transition-transform" />
+                <span>Register as Ambassador</span>
+                <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
+              </button>
+            </Magnetic>
+          )}
 
           <Magnetic strength={0.25} range={60}>
             <button
               onClick={handleTakePledgeClick}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full text-sm font-space font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-ictak-blue to-ictak-cyan hover:shadow-md cursor-pointer transition-all duration-300"
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full text-sm font-space font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-ictak-blue to-ictak-cyan hover:shadow-md cursor-pointer transition-all duration-300"
             >
               Take the Pledge
             </button>
@@ -162,8 +161,17 @@ export default function Hero({}: HeroProps) {
 
           <Magnetic strength={0.25} range={60}>
             <button
+              onClick={handleChoosePathClick}
+              className="w-full sm:w-auto px-7 py-3.5 rounded-full text-sm font-space font-semibold uppercase tracking-wider text-white bg-white/5 hover:bg-white/10 glass-panel border-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.2)]"
+            >
+              Choose Your Path
+            </button>
+          </Magnetic>
+
+          <Magnetic strength={0.25} range={60}>
+            <button
               onClick={handleStartClubClick}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full text-sm font-space font-semibold uppercase tracking-wider text-ictak-cyan flex items-center justify-center gap-2 glass-panel border-ictak-cyan/20 hover:border-ictak-cyan/40 bg-ictak-cyan/5 hover:bg-ictak-cyan/10 transition-all duration-300 cursor-pointer"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full text-sm font-space font-semibold uppercase tracking-wider text-ictak-cyan flex items-center justify-center gap-2 glass-panel border-ictak-cyan/20 hover:border-ictak-cyan/40 bg-ictak-cyan/5 hover:bg-ictak-cyan/10 transition-all duration-300 cursor-pointer"
             >
               <BsPlayCircle className="text-lg animate-pulse" />
               Start a Club
