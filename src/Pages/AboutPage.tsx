@@ -4,7 +4,7 @@ import { useLayoutContext } from '../components/RootLayout';
 import { FiShield, FiTarget, FiUsers, FiAward } from 'react-icons/fi';
 
 const FocusAreas = lazy(() => import('../components/FocusAreas'));
-const Timeline = lazy(() => import('../components/Timeline'));
+// const Timeline = lazy(() => import('../components/Timeline'));
 const Achievements = lazy(() => import('../components/Achievements'));
 const Gallery = lazy(() => import('../components/Gallery'));
 const Partners = lazy(() => import('../components/Partners'));
@@ -45,7 +45,7 @@ export default function AboutPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-8"
             >
-              SafeTech Kerala is a government-backed collaborative cyber literacy and digital hygiene movement driven by ICT Academy of Kerala (ICTAK), Kerala State IT Mission (KSITM), and Kerala Police Cyberdome.
+              SafeTech Kerala is a government-backed collaborative cyber literacy and digital hygiene movement driven by Goverment of Keralam, Kerala State IT Mission (KSITM), and Kerala Police Cyberdome.
             </motion.p>
           </div>
 
@@ -55,13 +55,9 @@ export default function AboutPage() {
               {
                 icon: FiTarget,
                 title: 'Statewide Goal',
-                desc: 'Empowering 500,000+ citizens, students, and elders with actionable cyber hygiene skills.',
+                desc: 'Empowering 2 lakh+ citizens, students, and elders with actionable cyber hygiene skills.',
               },
-              {
-                icon: FiShield,
-                title: 'Police Cyberdome Pact',
-                desc: 'Direct advisories, real-time scam threat intelligence, and legal awareness integration.',
-              },
+              
               {
                 icon: FiUsers,
                 title: 'Grassroots Chapters',
@@ -102,7 +98,7 @@ export default function AboutPage() {
         <FocusAreas language={language} />
 
         {/* Milestone Timeline */}
-        <Timeline />
+        {/* <Timeline /> */}
 
         {/* Achievements */}
         <Achievements />

@@ -114,7 +114,7 @@ export default function Header({
           {/* Trust Signals */}
           <div className="flex items-center gap-2 text-[8px] sm:text-[9px] text-slate-400 dark:text-slate-550 font-sans font-medium uppercase border-l pl-3 border-slate-300 dark:border-slate-700">
             <span className="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-350 font-bold border border-slate-200 dark:border-slate-700">
-              ICTAK
+              Goverment of Keralam
             </span>
             <span className="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-350 font-bold border border-slate-200 dark:border-slate-700">
               KSITM

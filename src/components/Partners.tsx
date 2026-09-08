@@ -4,7 +4,7 @@ import { FiShield, FiBriefcase, FiAward, FiCompass } from 'react-icons/fi';
 const Marquee = (MarqueeComponent as any).default || MarqueeComponent;
 
 const partnersData = [
-  { id: 1, name: "ICT Academy of Kerala", icon: FiShield, color: "hover:text-[#004d80]" },
+  { id: 1, name: "Goverment of Keralam", icon: FiShield, color: "hover:text-[#004d80]" },
   { id: 2, name: "Kerala State IT Mission", icon: FiCompass, color: "hover:text-[#00b4d8]" },
   { id: 3, name: "Kerala Police Cyberdome", icon: FiShield, color: "hover:text-[#ef4444]" },
   { id: 4, name: "Department of IT (E&ITD)", icon: FiBriefcase, color: "hover:text-[#0f172a]" },

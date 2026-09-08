@@ -126,7 +126,7 @@ export default function Hero({ onRegisterAmbassador }: HeroProps) {
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="font-sans text-xs md:text-base text-slate-200 leading-relaxed font-light text-left"
         >
-          Welcome to SafeTech Kerala, a joint digital safety and responsibility campaign by ICTAK, KSITM, and Kerala Police Cyberdome. Take the pledge, test your Cyber IQ, and safeguard your digital footprint today.
+          Welcome to SafeTech Kerala, a joint digital safety and responsibility campaign by Goverment of Keralam, KSITM, and Kerala Police Cyberdome. Take the pledge, test your Cyber IQ, and safeguard your digital footprint today.
         </motion.p>
 
         {/* Action Buttons */}

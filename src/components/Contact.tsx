@@ -136,7 +136,7 @@ export default function Contact({ language }: ContactProps) {
             {/* Embedded Google Map (Technopark location) */}
             <div className="w-full h-52 sm:h-64 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md relative">
               <iframe
-                title="ICTAK Technopark Map"
+                title="Technopark Headquarters Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.7485084964687!2d76.879796014783!3d8.55743899384876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05beebd5d1b7d5%3A0xe5a36391d1e43e24!2sICT%20Academy%20of%20Kerala!5e0!3m2!1sen!2sin!4v1625076939521!5m2!1sen!2sin"
                 width="100%"
                 height="100%"

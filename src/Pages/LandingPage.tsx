@@ -63,7 +63,7 @@ export default function LandingPage() {
               </h2>
 
               <p className="font-sans text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
-                Lead the state-wide cybersecurity & digital responsibility movement in your institution, panchayath, and municipality. Complete our 15-credit module, lead local digital safety workshops, and earn official credentials from ICTAK, KSITM, and Kerala Police Cyberdome.
+                Lead the state-wide cybersecurity & digital responsibility movement in your institution, panchayath, and municipality. Complete our 15-credit module, lead local digital safety workshops, and earn official credentials from Goverment of Keralam, KSITM, and Kerala Police Cyberdome.
               </p>
 
             

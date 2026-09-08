@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 interface AchievementItem {
   id: number;
   year: string;
-  category: 'AWARDS' | 'COLLABORATIONS' | 'IMPACT' | 'MILESTONES';
+  category: string;
   title: string;
   description: string;
 }
@@ -11,38 +11,31 @@ interface AchievementItem {
 const achievements: AchievementItem[] = [
   {
     id: 1,
-    year: "2024",
-    category: "COLLABORATIONS",
-    title: "Police Cyberdome Pact",
-    description: "Formalized joint technical curriculum development and resource-sharing pacts with Kerala Police Cyberdome experts to build robust campaign content."
+    year: "2026",
+    category: "October",
+    title: "Statewide Campaign Launch",
+    description: "Official launch of SafeTech Kerala and club initiatives across schools and colleges to promote digital safety and cyber hygiene among students."
   },
   {
     id: 2,
-    year: "2024",
-    category: "MILESTONES",
-    title: "Pilot Campaign Launch",
-    description: "Successfully conducted pilot digital responsibility workshops in 15 schools across Thiruvananthapuram and Ernakulam, testing interactive quizzes."
+    year: "2026",
+    category: "November",
+    title: "250 Clubs Established",
+    description: "Successfully established and onboarded 250 active SafeTech clubs in educational institutions across all 14 districts of Kerala."
   },
   {
     id: 3,
-    year: "2025",
-    category: "IMPACT",
-    title: "Grassroots Club Onboarding",
-    description: "Onboarded 120 institutional student clubs, training over 5,000+ student guides and launching local community parenting drives."
+    year: "2026",
+    category: "December",
+    title: "1 Lakh Citizens Empowered",
+    description: "Empowered over 1,00,000 students, parents, and citizens through cyber safety pledges, interactive quizzes, and awareness drives."
   },
   {
     id: 4,
-    year: "2025",
-    category: "AWARDS",
-    title: "Digital Safety Outreach Award",
-    description: "Recognized as the best cybersecurity public campaign of the year by the Department of Electronics & IT (E&ITD) for innovative civic triaging."
-  },
-  {
-    id: 5,
-    year: "2026",
-    category: "MILESTONES",
-    title: "Statewide Expansion",
-    description: "Scaled resources across all 14 districts in Kerala, targetting 300+ SafeTech clubs, 100k+ citizen pledges, and introducing Bhashini portal translations."
+    year: "2027",
+    category: "Target",
+    title: "1,000 SafeTech Community Clubs Established",
+    description: "Expanding grassroots cyber leadership with 1,000 SafeTech community and institutional clubs active across panchayaths and municipalities statewide."
   }
 ];
 
