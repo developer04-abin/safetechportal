@@ -120,7 +120,7 @@ export const translations = {
     download: "Download PDF",
     testimonials: "Success Stories & Testimonials",
     assetsTab: "Downloadable Materials",
-    storiesTab: "Ambassador Video Stories",
+    storiesTab: "Success Stories",
 
     // AI Chatbot
     botTitle: "SafeTech AI SOS Assistant",
